@@ -3,10 +3,10 @@ import pytest
 from selene import browser
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from utils import attach
+from qa_guru_python_12_homework_14.utils import attach
 from dotenv import load_dotenv
-from pages.events_page import events_page
-from pages.main_page import main_page
+from qa_guru_python_12_homework_14.models.pages.events_page import events_page
+from qa_guru_python_12_homework_14.models.pages import main_page
 
 DEFAULT_BROWSER_VERSION = '100.0'
 

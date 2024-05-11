@@ -1,5 +1,5 @@
-from pages.main_page import main_page
-from pages.events_page import events_page
+from qa_guru_python_12_homework_14.models.pages import main_page
+from qa_guru_python_12_homework_14.models.pages.events_page import events_page
 
 
 def test_open_main_page(open_main_page):
