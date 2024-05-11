@@ -7,7 +7,6 @@ def test_get_events(open_events_page):
 
 def test_send_empty_form(open_events_page):
     events_page.send_request_for_get_materials()
-    # events_page.get_error_message('Пожалуйста, заполните все обязательные поля')
     events_page.get_error_message('Please fill out all required fields')
 
 
