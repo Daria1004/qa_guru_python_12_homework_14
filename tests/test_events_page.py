@@ -1,14 +1,13 @@
 import allure, time
+from pages.events_page import events_page
 
 
 def test_get_events(open_events_page):
-    events_page = open_events_page
     with allure.step("Открытие  модального окна Получить материалы"):
         events_page.modal_should_have_title('Получить материалы')
 
 
 def test_send_empty_form(open_events_page):
-    events_page = open_events_page
     with allure.step("Отправить заявку на получение материалов"):
         events_page.send_request_for_get_materials()
     with allure.step("Получено сообщение об ошибке"):
@@ -16,7 +15,6 @@ def test_send_empty_form(open_events_page):
 
 
 def test_send_fill_form(open_events_page):
-    events_page = open_events_page
     with allure.step("Отправить заявку на получение материалов"):
         events_page.send_request_for_get_materials()
     with allure.step("Заполнение формы"):

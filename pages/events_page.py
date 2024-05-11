@@ -1,18 +1,21 @@
+import allure
 from selene import browser, have, command, be
 
 class EventsPage:
-    def open(self):
-        browser.open('https://bestdoctor.ru/events/')
-        return self
 
-    def data_blocks(self):
-        return browser.element('[class ="t774 "]')
+    def open(self):
+        with allure.step("Открытие страницы Прошедшие вебинары"):
+            browser.open('/events')
+
+    # def data_blocks(self):
+    #     return browser.element('[class ="t774 "]')
 
     def should_have_title(self, value):
         browser.element('[data-elem-id="1605710160795"]>.tn-atom').should(have.exact_text(value))
 
     def open_modal_get_record(self):
-        browser.element('#cardbtn3_357052737').click()
+        with allure.step("Получить запись"):
+            browser.element('#cardbtn3_357052737').click()
 
     def modal_should_have_title(self, value):
         browser.element('#popuptitle_356924244').should(have.text(value))
@@ -37,3 +40,6 @@ class EventsPage:
 
     def successful_redirect(self):
         browser.should(have.url('https://bestdoctor.ru/events-success-page'))
+
+
+events_page = EventsPage()

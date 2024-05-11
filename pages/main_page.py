@@ -1,3 +1,4 @@
+import allure
 from selene import browser, have, command, be
 
 class MainPage:
@@ -6,18 +7,15 @@ class MainPage:
 
 
     def open(self):
-        browser.open('/')
-        return self
+        with allure.step("Открытие главной страницы"):
+            browser.open('/')
 
     def footer_should_have_text(self, value):
         self.footer.perform(command.js.scroll_into_view)
         self.footer.should(have.text(value))
 
     def open_feedback_modal(self):
-        browser.element('[data-artboard-recid="473291348"].t396__filter').perform(command.js.remove)
-        browser.element('[data-artboard-recid="473291348"].t396__carrier').perform(command.js.remove)
-        browser.element('[href="#popup:myform-dms"]').perform(command.js.scroll_into_view)
-        browser.element('a[href="#popup:myform-dms"]').click()
+        browser.element('[href="#popup:myform-dms"]').perform(command.js.click)
 
     def modal_should_have_title(self, value):
         browser.element('[field="tn_text_1470209944682"]').should(have.text(value))
@@ -52,3 +50,6 @@ class MainPage:
 
     def open_vc(self):
         browser.open("https://vc.ru/bestdoctor")
+
+
+main_page = MainPage()
