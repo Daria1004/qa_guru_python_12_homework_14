@@ -14,7 +14,6 @@
 - [x] Негативная проверка при отправке незаполненной формы
 
 ## Проект реализован с использованием
-Java Gradle IntelliJ IDEA Selenide Selenoid JUnit5 Jenkins Allure Report Allure TestOps Telegram Jira
 
 ![This is an image](/design/icons/Python.png)![This is an image](/design/icons/pycharm.png)![This is an image](/design/icons/pytest.png)![This is an image](/design/icons/github.png)![This is an image](/design/icons/Selenoid.png)![This is an image](/design/icons/Jenkins.png)![This is an image](/design/icons/allure.png)![This is an image](/design/icons/Allure_Report.png)![This is an image](/design/icons/Telegram.png)
 
