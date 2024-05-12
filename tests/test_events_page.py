@@ -1,4 +1,4 @@
-from qa_guru_python_12_homework_14.models.pages.events_page import events_page
+from models.pages.events_page import events_page
 
 
 def test_get_events(open_events_page):
