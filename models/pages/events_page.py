@@ -45,5 +45,4 @@ class EventsPage:
         with allure.step("Сообщение об успешном доступе к вебинару"):
             browser.should(have.url('https://bestdoctor.ru/events-success-page'))
 
-
 events_page = EventsPage()

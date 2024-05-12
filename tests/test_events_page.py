@@ -16,6 +16,3 @@ def test_send_fill_form(open_events_page):
     events_page.click_pers_info()
     events_page.send_request_for_get_materials()
     events_page.successful_redirect()
-    # time.sleep(3)
-    # with allure.step("Сообщение об успешном доступе к вебинару"):
-    #     events_page.successful_redirect()

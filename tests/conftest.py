@@ -71,4 +71,3 @@ def open_events_page():
 @pytest.fixture(scope='function')
 def open_main_page():
     main_page.open()
-

@@ -40,14 +40,6 @@ class MainPage:
             self.header.element('[data-elem-id="1653048299711"]').element('a').should(
                 have.attribute('href', 'https://blog.bestdoctor.ru/'))
 
-    def should_have_info(self):
-        browser.element.element('[data-elem-id="1652883525054"]').should(
-            have.text('Когда страховая — главный эксперт в ДМС'))
-        browser.element.element('[data-elem-id="1652883525054"]').should(have.text('Когда ДМС удобно пользоваться'))
-        browser.element.element('#sbs-473291340-1652883525054').should(
-            have.text('Когда HR свободен от рутины и проблем'))
-        browser.element.element('#sbs-473291343-1652883525054').should(have.text('Когда сотрудники довольны сервисом'))
-
     def should_have_social_medias(self):
         with allure.step("Проверка наличия ссылок на социальные сети в футере"):
             self.footer.perform(command.js.scroll_into_view)
